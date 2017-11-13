@@ -30,10 +30,12 @@
 
 				And if you haven’t already thought of this one, Pocky goes great with ice cream and other desserts!
 			</p>
-
-	<table>
-
-
+	
+	<form action="submit.php">
+<!-- not created yet -->
+		<fieldset>
+			<legend> Survey: </legend>
+<table>
 	<tr>
 		<td><?php echo $pages["counter"]; ?></td>
 		<td><?php echo $pages["fname"]; ?></td>
@@ -59,6 +61,11 @@
 	</form>
 		
 </table>
+	
+			<input type="submit" value="Submit">
+		</fieldset>
+	</form>
+	
 	<br>
 	<a href="thanks.html">Thank you for submitting!</a>
 	<input type="hidden" name="redirect" value="thanks.html">
