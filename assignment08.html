@@ -35,7 +35,7 @@
 <!-- not created yet -->
 		<fieldset>
 			<legend> Survey: </legend>
-<table>
+
 	<tr>
 		<td><?php echo $pages["counter"]; ?></td>
 		<td><?php echo $pages["fname"]; ?></td>
@@ -43,7 +43,7 @@
 		<td><?php echo $pages["email"]; ?></td>
 	</tr>
 
-	<form>
+	<div>
 		<input type="radio" name="pocky">
 		<label>Pocky</label><br>
 		<input type="radio" name="kitkat">
@@ -52,15 +52,13 @@
 		<label>I can't choose</label><br>
 		<input type="radio" name="none">
 		<label>None</label>
-	</form>
+	</div>
 
 		
-	<form>
+	<div>
 		<textarea name="message" rows="10" cols="30" placeholder="Why did you choose the answer above?"></textarea>
 
-	</form>
-		
-</table>
+	</div>
 	
 			<input type="submit" value="Submit">
 		</fieldset>
