@@ -34,54 +34,42 @@
 	
 	<div class="mainbox">	
 	<form method="post" action="thanks.php">
-<!-- not created yet -->
-		<fieldset>
-			<legend> Survey: </legend>
+<ul class="formformat">
+    <li>
+    	<label>Full Name </label>
+    	<input type="text" name="fname" id="fname" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="lname" id="lname" class="field-divided" placeholder="Last" />
+    </li>
+    <li>
+        <label>Email</label>
+        <input type="email" name="email" class="field-long" />
+    </li>
+    <li>
+    	<label>Phone Number</label>
+        <input type="pnumber" name="pnumber" class="field-long" />
+    </li>
+    <li>
+    	<label>Which Candies Do You Like?</label>
+    	<input type="checkbox" name="pocky" value="pocky"> Pocky<br>
+		<input type="checkbox" name="kitkat" value="kitkat"> Kitkat<br>
+    </li>
 
-			<div>
-				<label for="fname">First Name: </label>
-				<input type="text" name="fname" id="fname">
+    <li>
+    	<label>Which One Do You Like The Most?</label>
+    	<input type="radio" name="preference" value="pocky2"> Pocky<br>
+		<input type="radio" name="preference" value="kitkat2"> Kitkat<br>
+		<input type="radio" name="preference" value="cantchoose"> I can't choose<br>
+		<input type="radio" name="preference" value="neither"> Neither
+    </li>
 
-				<label for="lname">Last Name: </label>
-				<input type="text" name="lname" id="lname">
-
-				<label for="email">Email: </label>
-				<imput type="email" name="email"></imput>
-
-				<label for="pnumber">Phone Number: </label>
-				<imput type="Number" name="pnumber"></imput>
-			</div>
-
-			<h3>Which one would like to eat right now?</h3>
-			<div>
-				<input type="radio" name="pocky">
-				<label>Pocky</label><br>
-
-				<input type="radio" name="kitkat">
-				<label>Kitkat</label><br>
-
-				<input type="radio" name="I can't choose.">
-				<label>I can't choose</label><br>
-
-				<input type="radio" name="none">
-				<label>None</label>
-			</div>
-	
-	<h3>Which one do you prefer?</h3>
-	<div>
-		<input type="checkbox" name="snack" value="pocky">Pocky<br>
-		<input type="checkbox" name="snack" value="kitkat">Kit Kat
-	</div>
-
-		
-	<div>
-		<textarea name="message" rows="10" cols="30" placeholder="Why did you choose the answer above?"></textarea>
-
-	</div>
-	
-			<input type="submit" value="Submit">
-		</fieldset>
-	</form>
+    <li>
+        <label>Why did you choose the answer above?</label>
+        <textarea name="message" class="field-long field-textarea"></textarea>
+    </li>
+    <li>
+        <input type="submit" value="Submit" />
+    </li>
+</ul>
+</form>
 	
 
 	<footer>
