@@ -41,7 +41,7 @@ html, body{
 .box2 {
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-:1;
+  grid-row:1;
 }
 
 .box3 {
@@ -127,6 +127,6 @@ html, body{
 .thanksbox {
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-:1;
+  grid-row:1;
   margin-top: 300px;
-g}
+}
