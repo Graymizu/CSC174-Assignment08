@@ -1,9 +1,9 @@
 <?php
 	// 1. Create a database connection
 	$dbhost = "localhost";
-	$dbuser = "widget_corp";
-	$dbpass = "coffee";
-	$dbname = "widget_corp";
+	$dbuser = "urcscon3_sydney";
+	$dbpass = "coffee1N";
+	$dbname = "urcsccon3_sydney";
 
 	$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
@@ -18,7 +18,7 @@
 
 	// 2. Perform database query
 	$query  = "SELECT * ";
-	$query .= "FROM pages ";
+	$query .= "FROM mytable ";
 	$query .= "WHERE visible = 1 ";
 	$query .= "ORDER BY position ASC";
 
@@ -27,36 +27,39 @@
 	
 ?>
 
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Database Read - Pages</title>
+	<title>Administration Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/grid.css">
 </head>
+
 <body>
-
-	<h1>Database Read - Pages</h1>
-
-	<table border>
+	<div class="container">
+		<h1>Administration Page</h1>
+		<h2>Pokey Survey Results</h2>
+		<table border>
 
 <?php
 	// 3. Use returned data (if any)
-	while($pages = mysqli_fetch_assoc($result)) {
+	while($mytable = mysqli_fetch_assoc($result)) {
 		// output data from each row
 ?>
-
 		<tr>
-			<td><?php echo $pages["menu_name"]; ?></td>
-			<td><?php echo $pages["content"]; ?></td>
-
+			<td><?php echo $mytable["counter"]; ?></td>
+			<td><?php echo $mytable["fname"]; ?></td>
+			<td><?php echo $mytable["lname"]; ?></td>
+			<td><?php echo $mytable["email"]; ?></td>
+			<td><?php echo $mytable["pnumber"]; ?></td>
 		</tr>
 
-<?php } ?>
+<?php } ?>	
+		</table>
 
-	</table>
-
-	<br>
-	<a href=".">Back to the Index</a>
-
+	</div>
 </body>
 </html>
 
