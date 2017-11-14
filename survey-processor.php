@@ -20,7 +20,7 @@
 	$pnumber = mysqli_real_excape_string($connection, $pnumber);
 
 //databse query
-$query  = "INSERT INTO contact (";
+$query  = "INSERT INTO survey (";
 	$query .= "  fname, email, pnumber";
 	$query .= ") VALUES (";
 	$query .= "  '{$fname}','{$email}', '{$pnumber}'";
