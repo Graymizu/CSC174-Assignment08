@@ -3,7 +3,7 @@
 	$dbhost = "localhost";
 	$dbuser = "urcscon3_sydney";
 	$dbpass = "coffee1N";
-	$dbname = "urcsccon3_sydney";
+	$dbname = "urcscon3_sydney";
 
 	$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
