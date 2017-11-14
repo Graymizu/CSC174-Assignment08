@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 14, 2017 at 11:44 AM
+-- Generation Time: Nov 14, 2017 at 11:51 AM
 -- Server version: 5.6.32-78.1-log
 -- PHP Version: 5.6.20
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `survey` (
   `counter` int(11) NOT NULL,
   `fname` varchar(75) NOT NULL,
+  `lname` varchar(75) NOT NULL,
   `email` varchar(75) NOT NULL,
   `pnumber` varchar(75) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
