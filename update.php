@@ -16,7 +16,7 @@
 	$email = mysqli_real_excape_string($connection, $email);
 	$pnumber = mysqli_real_excape_string($connection, $pnumber);
 
-	$query = "UPDATE survey mytable";
+	$query = "UPDATE survey";
 	$query .= "fname = '$fname', email ='$email', pnumber = $'pnumber' ";
 	$query .= "WHERE counter = {$counter}";
 	$result = mysqli_query($connection, $query);
