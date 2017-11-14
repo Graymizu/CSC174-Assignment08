@@ -12,11 +12,11 @@
   
 </head>
 <body>
-   <div class="container">
-   	<div class="box2">
+   <div class="container2">
+   	<div class="thanksbox">
      	<h1> Thank you, <?php echo $_POST["fname"]; ?> for participating in our survey!</h1>
    	</div>
-   	<div class="endbox">
+   	<div class="mainbox2">
    		<div class="right">
 	   		<ul class="formformat">
 	   			<li>
