@@ -115,13 +115,13 @@ select{
     height: 100px;
 }
 .formformat input[type=submit], .formformat input[type=button]{
-    background: #4B99AD;
+    background: #ff1919;
     padding: 8px 15px 8px 15px;
     border: none;
     color: #fff;
 }
 .formformat input[type=submit]:hover, .formformat input[type=button]:hover{
-    background: #4691A4;
+    background: #FF4500;
     box-shadow:none;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
