@@ -31,30 +31,39 @@
 				And if you haven’t already thought of this one, Pocky goes great with ice cream and other desserts!
 			</p>
 	
-	<form action="submit.php">
+	<form method="post" action="thanks.php">
 <!-- not created yet -->
 		<fieldset>
 			<legend> Survey: </legend>
 
-	<tr>
-		<td><?php echo $pages["counter"]; ?></td>
-		<td><?php echo $pages["fname"]; ?></td>
-		<td><?php echo $pages["lname"]; ?></td>
-		<td><?php echo $pages["email"]; ?></td>
-		<td><?php echo $pages["number"]; ?></td>
-	</tr>
+			<div>
+				<label for="fname">First Name: </label>
+				<input type="text" name="lname" id="fname">
 
-	<h3>Which one would like to eat right now?</h3>
-	<div>
-		<input type="radio" name="pocky">
-		<label>Pocky</label><br>
-		<input type="radio" name="kitkat">
-		<label>Kitkat</label><br>
-		<input type="radio" name="I can't choose.">
-		<label>I can't choose</label><br>
-		<input type="radio" name="none">
-		<label>None</label>
-	</div>
+				<label for="lname">Last Name: </label>
+				<input type="text" name="lname" id="lname">
+
+				<label for="email">Email: </label>
+				<imput type="email" name="email"></imput>
+
+				<label for="pnumber">Phone Number: </label>
+				<imput type="Number" name="pnumber"></imput>
+			</div>
+
+			<h3>Which one would like to eat right now?</h3>
+			<div>
+				<input type="radio" name="pocky">
+				<label>Pocky</label><br>
+
+				<input type="radio" name="kitkat">
+				<label>Kitkat</label><br>
+
+				<input type="radio" name="I can't choose.">
+				<label>I can't choose</label><br>
+
+				<input type="radio" name="none">
+				<label>None</label>
+			</div>
 	
 	<h3>Which one do you prefer?</h3>
 	<div>
@@ -62,7 +71,7 @@
 		<input type="checkbox" name="snack" value="kitkat">Kit Kat
 	</div>
 
-	<h3>Why did you choose the answer above?</h3>	
+		
 	<div>
 		<textarea name="message" rows="10" cols="30" placeholder="Why did you choose the answer above?"></textarea>
 
@@ -72,18 +81,13 @@
 		</fieldset>
 	</form>
 	
-	<br>
-	<a href="thanks.html">Thank you for submitting!</a>
-	<input type="hidden" name="redirect" value="thanks.html">
 
-<!-- not sure how to properly link it together--> 
+	<footer>
+		<h2>Informatin Links</h2>
+		<p><a href="https://en.wikipedia.org/wiki/Kit_Kat">Wikipedia: KitKat</a></p>
+		<p><a href="http://www.pocky.com/">Pocky.com</a></p>
+	</footer>
 
 </body>
 </html>
 
-
-<!--
-links I got the information 
-https://en.wikipedia.org/wiki/Kit_Kat
-http://www.pocky.com/
--->

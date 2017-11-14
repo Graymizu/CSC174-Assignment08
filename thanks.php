@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang-"en">
+<html lang="en">
 
 <head>
 
@@ -11,7 +11,9 @@
 </head>
 <body>
    <div>
-      Thank you, 
+      Thank you, <?php echo $_POST["fname"]; ?> 
    </div>
+
+   
 </body>
 </html>
