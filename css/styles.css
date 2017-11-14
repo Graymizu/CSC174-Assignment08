@@ -2,13 +2,16 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	word-break: keep-all;
   background-color:#CA3632;
-  margin: 0;
 }	
 
 h1{	
-  color:red;
+  /*color:red;*/
   font-size: 50px;
   text-align: center;
+}
+
+.box2 h1{
+  color: red;
 }
 
 h2{
