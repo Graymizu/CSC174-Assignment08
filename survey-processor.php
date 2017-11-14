@@ -10,22 +10,20 @@
 
 //HTML form values in $_POST
 
-	$fname = Trim(stripslashes($_POST['first']));
-	$lname = Trim(stripslashes($_POST['last']));
+	$fname = Trim(stripslashes($_POST['fname']));
 	$email = Trim(stripslashes($_POST['email']));
 	$pnumber = Trim(stripslashes($POST['pnumber']));
 
 //escape all strings
 	$fname = mysqli_real_excape_string($connection, $fname);
-	$lname = mysqli_real_excape_string($connection, $lname);
 	$email = mysqli_real_excape_string($connection, $email);
 	$pnumber = mysqli_real_excape_string($connection, $pnumber);
 
 //databse query
 $query  = "INSERT INTO contact (";
-	$query .= "  fname, lname, email, pnumber";
+	$query .= "  fname, email, pnumber";
 	$query .= ") VALUES (";
-	$query .= "  '{$fname}', '{$lname}', '{$email}', '{$pnumber}'";
+	$query .= "  '{$fname}','{$email}', '{$pnumber}'";
 	$query .= ")";
 
 	$result = mysqli_query($connection, $query);
