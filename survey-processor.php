@@ -11,6 +11,7 @@
 //HTML form values in $_POST
 
 	$fname = Trim(stripslashes($_POST['fname']));
+	$lname = Trim(stripslashes($_POST['lname']));
 	$email = Trim(stripslashes($_POST['email']));
 	$pnumber = Trim(stripslashes($_POST['pnumber']));
 	$like_kit = Trim(stripcslashes($_POST['kitkat']));
@@ -20,21 +21,25 @@
 
 //escape all strings
 	$fname = mysqli_real_escape_string($connection, $fname);
+	$lname = mysqli_real_escape_string($connection, $lname);
 	$email = mysqli_real_escape_string($connection, $email);
 	$pnumber = mysqli_real_escape_string($connection, $pnumber);
- 	
+	$like_kit = mysqli_real_escape_string($connection, $like_kit);
+	$like_poc = mysqli_real_escape_string($connection, $like_poc);
 	$fav = mysqli_real_escape_string($connection, $fav);
 	$message = mysqli_real_escape_string($connection, $message);
 
 
 //databse query
-$query  = "INSERT INTO contact (";
-	$query .= "  fname, email, pnumber, kitkat, pocky, preference, message";
+	$query  = "INSERT INTO survey (";
+	$query .= "  fname, lname, email, pnumber, like_poc, like_kit, fav, message";
 	$query .= ") VALUES (";
-	$query .= "  '{$fname}','{$email}', '{$pnumber}', '{$like_kit}', '{$like_poc}', '{$fav}', '{$message}'";
+	$query .= "  '{$fname}', '{$lname}','{$email}', '{$pnumber}', '{$like_kit}', '{$like_poc}', '{$fav}', '{$message}'";
 	$query .= ")";
 
 	$result = mysqli_query($connection, $query);
+
+
 
 ?>
 <!DOCTYPE html>
