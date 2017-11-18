@@ -40,6 +40,7 @@
 <body>
 	<div class="container">
 		<h1>Administration Page</h1>
+		<div class="mainbox">
 		<h2>Pokey Survey Results</h2>
 		<table border>
 
@@ -58,7 +59,7 @@
 
 <?php } ?>	
 		</table>
-
+	</div>
 	</div>
 </body>
 </html>
