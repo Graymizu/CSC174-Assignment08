@@ -14,22 +14,6 @@
 
 	$result = $connection->query($query);
 
-	//////////////////////////////////////////////
-/*
-	if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<br> counter: ". $row["counter"]. " - Name: ". $row["fname"]. " " . $row["lname"] . "<br>";
-    }
-} else {
-    echo "0 results";
-}
-
-mysqli_close($connection);
-
-?>
-*/
-	///////////////////////////////////////////////////
 ?>
 
 
@@ -46,24 +30,53 @@ mysqli_close($connection);
 	<body>
 		<div class="container">
 			<h1>Administration Page</h1>
-			<div class="mainbox">
-				<h2>Pokey Survey Results</h2>
-				<table border>
+			<div class="box2">
+				<div class="formformat">
+					<h2>Pokey Survey Results</h2>
+					<table border>
+						<tr>
+							<td> ID# </td>
+							<td> First Name </td>
+							<td> Last Name </td>
+							<td> Email </td>
+							<td> Phone# </td>
+						</tr>
 
 <?php
 	// 3. Use returned data (if any)
 	while($row = mysqli_fetch_assoc($result)) {
 		// output data from each row
 ?>
-					<tr>
-						<td><?php echo $row["counter"]; ?></td>
-						<td><?php echo $row["fname"]; ?></td>
-						<td><?php echo $row["lname"]; ?></td>
-						<td><?php echo $row["email"]; ?></td>
-						<td><?php echo $row["pnumber"]; ?></td>
-					</tr>
+						<tr>
+							<td><?php echo $row["counter"]; ?></td>
+							<td><?php echo $row["fname"]; ?></td>
+							<td><?php echo $row["lname"]; ?></td>
+							<td><?php echo $row["email"]; ?></td>
+							<td><?php echo $row["pnumber"]; ?></td>
+							<td>
+								<form method="post" action="view.php">
+									<button type="submit" name="counter" value=<?php echo $row["counter"]; ?>>View & Edit</button> 
+								</form>
+							</td>
+						</tr>
 <?php } ?>	
-				</table>
+					</table>
+				</div>
+			</div>
+			<div class="mainbox">
+				<div class="formformat">
+					<form method="post" action="delete.php">
+						<ul>
+							<li>
+								<label>Select an account #: </label>
+       							<input type="number" name="id" />
+							</li>
+							<li>
+								<input type="submit" value="DELETE" />
+							</li>
+						</ul>
+					</form>
+				</div>
 			</div>
 		</div>
 	</body>
