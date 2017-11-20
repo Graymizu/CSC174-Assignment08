@@ -9,14 +9,28 @@
 	$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 //HTML form values in $_POST
-
+	
+	$blanck = " ";	
 	$fname = Trim(stripslashes($_POST['fname']));
 	$lname = Trim(stripslashes($_POST['lname']));
 	$email = Trim(stripslashes($_POST['email']));
 	$pnumber = Trim(stripslashes($_POST['pnumber']));
-	$like_kit = Trim(stripcslashes($_POST['kitkat']));
-	$like_poc = Trim(stripcslashes($_POST['pocky']));
-	$fav = Trim(stripcslashes($_POST['preference']));
+	if (empty($_POST['kitkat'])) {
+			$like_kit = $blanck;
+		}else{
+			$like_kit = Trim(stripcslashes($_POST['kitkat']));
+		}
+	if (empty($_POST['pocky'])) {
+			$like_poc = $blanck;
+		}else{
+			$like_poc = Trim(stripcslashes($_POST['pocky']));
+		}
+	if (empty($_POST['preference'])) {
+			$fav = $blanck;
+		}else{
+			$fav = Trim(stripcslashes($_POST['preference']));
+
+		}	
 	$message = Trim(stripcslashes($_POST['message']));
 
 //escape all strings
